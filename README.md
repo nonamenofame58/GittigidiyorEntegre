@@ -1,6 +1,6 @@
 # GittigidiyorEntegre
 Gittigidiyor entegrasyon 
-Kurumsal servisler test edilmemiştir sadece json verisi döndürür...
+Kurumsal servisler test edilmedi sadece json verisi döndürür...
 
 
 
