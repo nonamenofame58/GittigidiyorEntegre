@@ -79,7 +79,7 @@ from updateProductWithNewCargoDetail import updateProductWithNewCargoDetail
 from getProductsByIds import getProductsByIds
 from getProductIds import getProductIds
 from checkForItemId import checkForItemId
-from getProductStatuses import updateItemId
+from getProductStatuses import getProductStatuses
 from updateItemId import updateItemId
 from updateProductVariants import updateProductVariants
 from getProductVariants import getProductVariants
@@ -106,7 +106,7 @@ from getSalesByDateRange import getSalesByDateRange
 from giveRateAndComment import giveRateAndComment
 from replySaleComment import replySaleComment
 from remindForApproval import remindForApproval
-from getReasonsToCancelSales import getReasonsToCancelSales
+from getReasonsToCancelSale import getReasonsToCancelSale
 from cancelSale import cancelSale
 from getAccountTransactionsV3 import getAccountTransactionsV3
 from getSaleProcessReportV2 import getSaleProcessReportV2
@@ -149,6 +149,14 @@ from getWatchItems import getWatchItems
 # Store Service
 
 from getStore import getStore
+
+
+
+
+
+
+
+
 
 
 
@@ -412,7 +420,6 @@ from getStore import getStore
                 #    Hata mesajı lang=tr ise Türkçe,
                 #    lang=en ise İngilizce olarak çıkar.
             #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 
 
