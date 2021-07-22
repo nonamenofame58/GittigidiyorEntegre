@@ -26,9 +26,44 @@ from getDeepestCategories import getDeepestCategories
 from getCategoryVariantSpecs import getCategoryVariantSpecs
 from getRequiredCategorySpecs import getRequiredCategorySpecs
 from getCategorySpecsWithDetail import getCategorySpecsWithDetail
-
-
-
+# Accounting Service
+from getBalances import getBalances
+from getDebtCollection import getDebtCollection
+from getSrsProcessSaleItem import getSrsProcessSaleItem
+from getSrsProcessDetailsSaleItem import getSrsProcessDetailsSaleItem
+# Product Service
+from cloneProduct import cloneProduct
+from deleteProduct import deleteProduct
+from getNewlyListedProductIdList import getNewlyListedProductIdList
+from calculatePriceForShoppingCart import calculatePriceForShoppingCart
+from getProduct import getProduct
+from updateStock import updateStock
+from updateVariantStock import updateVariantStock
+from relistProducts import relistProducts
+from getStockAndPrice import getStockAndPrice
+from getProductDescription import getProductDescription
+from getProductSpecs import getProductSpecs
+from updatePriceByPercentage import updatePriceByPercentage
+from updateProductWithNewCargoDetail import updateProductWithNewCargoDetail
+from getProductsByIds import getProductsByIds
+from getProductIds import getProductIds
+from checkForItemId import checkForItemId
+from getProductStatuses import updateItemId
+from updateItemId import updateItemId
+from updateProductVariants import updateProductVariants
+from getProductVariants import getProductVariants
+from updateStockAndActivateProduct import updateStockAndActivateProduct
+from updateMarketPrice import updateMarketPrice
+from updateVariantStockAndActivateProduct import updateVariantStockAndActivateProduct
+from getItemIdDetails import getItemIdDetails
+from updateProductSales import updateProductSales
+from applySameDayDeliveryFeature import applySameDayDeliveryFeature
+# Product Option Service
+from getOptionFeaturesInfo import getOptionFeaturesInfo
+from addOptionsToCart import addOptionsToCart
+from removeOptionsFromCart import removeOptionsFromCart
+from calculateOptionsPrice import calculateOptionsPrice
+from payPrice import payPrice
 
 ### JSON ###
 # .asJson       ////// Json olarak getirir
@@ -175,6 +210,121 @@ from getCategorySpecsWithDetail import getCategorySpecsWithDetail
              #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
             
+### GET BALANCES ###
+             #*getBalances(String apiKey, String sign, long time, String lang, String startDate, String endDate, int pageNumber, int pageSize,String balanceTransferStatus,session)
+             
+             #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+             #apiKey: String
+                  #Uygulamanızın anahtarı.
+             #sign: String
+                #Uygulamanın o anki isteğinin imzası.
+             #time: long
+                #İşlemin gerçekleştirildiği zaman. ///timeStamp
+             #lang: String
+                #Olası bir hata anında dönen hata mesajının dilini belirtmek için kullanılır.
+             #startDate: String
+                #Başlangıç tarihi.
+             #endDate: String
+                #Bitiş tarihi.
+             #pageNumber: Int
+                #Kaçıncı sayfadan başlayacak?
+             #pageSize: Int
+                #Kaç kayıt listelenecek?
+             #balanceTransferStatus: String
+                #COMPLETED = İşlemi tamamlanmış ve satıcıya aktarılmış para transferleri
+             #WAITING_FOR_STATUS = Satıcıya aktarılması beklenen para transferleri
+             #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### GET DEBT COLLECTION ###
+             #*getDebtCollection(String apiKey, String sign, long time, String lang, queryDebtCollectionRequest = {'balanceCode' : '' , 'pageNumber' : '' , 'pageSize' : ''} ,session)
+             #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                            # apiKey: String
+                            #      Uygulamanızın anahtarı.
+                            # sign: String
+                            #       Uygulamanın o anki isteğinin imzası.
+                            #  time: long
+                            #       O anki zaman.
+                            #  lang: String
+                            #       Olası bir hata anında dönen hata mesajının dilini belirtmek için kullanılır.
+                            #       Hata mesajı lang=tr ise Türkçe,lang=en ise İngilizce olarak çıkar.
+                            #  balanceCode: String
+                            #       Bakiye kodu.
+                            #  pageNumber: Int
+                            #       Kaçıncı sayfadan başlayacak?
+                            #  pageSize: Int
+                            #       Kaç kayıt listelenecek?
+            #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+### GET SRS PROCESS SALES ###
+                            
+                #*getSrsProcessSaleItem(String apiKey, String sign, long time, String lang, getSrsProcessSaleItem = {'balanceCode' : '' , 'pageNumber' : '' , 'pageSize' : ''} ,session)
+
+                #------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                #apiKey: String
+                #    Uygulamanızın anahtarı.
+                #sign: String
+                #    Uygulamanın o anki isteğinin imzası.
+                #time: long
+                #    O anki zaman.
+                #lang: String
+                #    Olası bir hata anında dönen hata mesajının dilini belirtmek için 
+                #kullanılır.
+                #    Hata mesajı lang=tr ise Türkçe,
+                #    lang=en ise İngilizce olarak çıkar.
+                #balanceCode: String
+                #    Bakiye kodu.
+                #pageNumber: Int
+                #    Kaçıncı sayfadan başlayacak?
+                #pageSize: Int
+                #    Kaç kayıt listelenecek?
+                #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### GET SRS PROCESS DETAILS ###
+                #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                #*getSrsProcessDetailsSaleItem(apiKey = '',sign = '',time = '',lang = SrsProcessSaleItemRequest {'memberId' : '','pageNumber':'','pageSize':'','salesCode' : ['1','2'],session)
+                    #apiKey: String
+                    #    Uygulamanızın anahtarı.
+                    #sign: String
+                    #    Uygulamanın o anki isteğinin imzası.
+                    #time: long
+                    #    O anki zaman.
+                    #lang: String
+                    #    Olası bir hata anında dönen hata mesajının dilini belirtmek için 
+                    #kullanılır.
+                    #    Hata mesajı lang=tr ise Türkçe,
+                    #    lang=en ise İngilizce olarak çıkar.
+                    #saleCodes: String
+                    #    Satış kodu listesi.
+                    #pageNumber: Int
+                    #    Kaçıncı sayfadan başlayacak?
+                    #pageSize: Int
+                    #    Kaç kayıt listelenecek?
+                #------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+### DELETE PRODUCT ###
+                    
+            #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                #*deleteProduct(apiKey = '',sign = '',time = '',productIdList = {'item' : []},itemIdList = {},lang = '',session)
+                #apiKey: String
+                #    Uygulamanızın anahtarı.
+                #sign: String
+                #    Uygulamanın o anki isteğinin imzası.
+                #time: long
+                #    İşlemin gerçekleştirildiği zaman.
+                #productIdArray: Integer[]
+                #    Silinmek istenen ürünlerin tekil anahtar dizisi.
+                #itemIdArray: String[]
+                #    Silinmek istenen ürünlerin entegrasyon yapan firma tarafındaki ürün tekil anahtar dizisi.
+                #lang: String
+                #    Olası bir hata anında dönen hata mesajının dilini belirtmek için kullanılır.
+                #
+                #    Hata mesajı lang=tr ise Türkçe,
+                #    lang=en ise İngilizce olarak çıkar.
+            #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 
