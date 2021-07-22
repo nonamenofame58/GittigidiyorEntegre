@@ -1,5 +1,7 @@
 # GittigidiyorEntegre
-Gittigidiyor entegrasyon
+Gittigidiyor entegrasyon 
+Kurumsal servisler test edilmemiştir sadece json verisi döndürür...
+
 
 
 ### Kitaplıklar ###
