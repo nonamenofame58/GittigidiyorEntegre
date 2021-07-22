@@ -7,7 +7,7 @@ import json
 
 
 class updateProductWithNewCargoDetail:
-    def __init__(self,apiKey = '',sign = '',time = '' itemId = '',productId = '',ProductType = {'categoryCode' : '','title' : '','subtitle' : '','specs' :{'spec' : []},'photos' : 'photoId' : '','url' : '','pageTemplate' : '','description' : '','startDate' : '' , 'catalogFilter' : '','format' : 'S', 'buyNowPrice' : '','listingDays' : '','productCount' : '','cargoDetail' : {'city' : '','cargoCompanies':{'cargoCompany' : ''},'shippingPayment' : '','shippingWhere' : '' , 'cargoCompanyDetails' : {'cargoCompanyDetail' : {'name' : '','cityPrice' : '' ,'countryPrice' : ''}}, 'shippingTime' : {'days' : 'tomorrow','beforeTime' : ''}},'boldOption' : '','catalogOption' : '','vitrineOption' : '','marketPrice' : '','globalTradeItemNo' : '','manufacturerPartNo' : ''},onSale = False,forceToSpecEntry = False,nextDateOption = False ,session = None):
+    def __init__(self,apiKey = '',sign = '',time = '' ,itemId = '',productId = '',ProductType = {'categoryCode' : '','title' : '','subtitle' : '','specs' :{'spec' : []},'photos' : {'photoId' : '','url' : '','pageTemplate' : '','description' : '','startDate' : '' , 'catalogFilter' : '','format' : 'S', 'buyNowPrice' : '','listingDays' : '','productCount' : '','cargoDetail' : {'city' : '','cargoCompanies':{'cargoCompany' : ''},'shippingPayment' : '','shippingWhere' : '' , 'cargoCompanyDetails' : {'cargoCompanyDetail' : {'name' : '','cityPrice' : '' ,'countryPrice' : ''}}, 'shippingTime' : {'days' : 'tomorrow','beforeTime' : ''}},'boldOption' : '','catalogOption' : '','vitrineOption' : '','marketPrice' : '','globalTradeItemNo' : '','manufacturerPartNo' : ''}},onSale = False,forceToSpecEntry = False,nextDateOption = False ,session = None):
 
         # Zeep Client
 

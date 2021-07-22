@@ -7,7 +7,7 @@ import json
 
 
 class search:
-    def __init__(self,keyword = '',criteria = {'format' : '','freeshipping' : '','startFromOne' : '','catalogOption' : '','newProduct' : '','minPrice' : '','maxPrice' : '','city' : '','runOutItems' : '','seller' : '','categoryCode' : '','catalogId' : '','categorySpecs' : {'categorySpec' : [{'name' : ''} , {'value' : ''}]}},startOffSet,rowCount = 1,includeDescription = False, withData = False,orderBy = '',lang = 'tr',session = None):
+    def __init__(self,keyword = '',criteria = {'format' : '','freeshipping' : '','startFromOne' : '','catalogOption' : '','newProduct' : '','minPrice' : '','maxPrice' : '','city' : '','runOutItems' : '','seller' : '','categoryCode' : '','catalogId' : '','categorySpecs' : {'categorySpec' : [{'name' : ''} , {'value' : ''}]}},startOffSet = 1,rowCount = 1,includeDescription = False, withData = False,orderBy = '',lang = 'tr',session = None):
 
         # Zeep Client
 

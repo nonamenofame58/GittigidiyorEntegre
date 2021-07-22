@@ -7,7 +7,7 @@ import json
 
 
 class deleteProduct:
-    def __init__(self,apiKey = '',sign = '',time = '',productIdList = [{'item' : ''}],itemIdList = {{'item' : ''}],lang = '' ,session = None):
+    def __init__(self,apiKey = '',sign = '',time = '',productIdList = [{'item' : ''}],itemIdList = [{'item' : ''}],lang = '' ,session = None):
 
         # Zeep Client
 

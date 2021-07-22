@@ -7,7 +7,7 @@ import json
 
 
 class getWatchItems:
-    def __init__(self,apiKey = '',sign = '',time = '',startOffSet,rowCount,withData = False,lang = '',session = None):
+    def __init__(self,apiKey = '',sign = '',time = '',startOffSet = 1,rowCount = 1,withData = False,lang = '',session = None):
 
         # Zeep Client
 
@@ -15,7 +15,7 @@ class getWatchItems:
         service = client.create_service('http://activity.individual.ws.listingapi.gg.com}IndividualActivityServiceBinding' , 'http://dev.gittigidiyor.com:8080/listingapi/ws/IndividualActivityService')
         with client.settings(raw_response=True):
             try:
-                response = helpers.serialize_object(service.getWatchItems(apiKey,sign,time,startOffSet,rowCount,withData,lang)content.decode('utf-8'),dict)
+                response = helpers.serialize_object(service.getWatchItems(apiKey,sign,time,startOffSet,rowCount,withData,lang).content.decode('utf-8'),dict)
                 #Parsing...
 
              

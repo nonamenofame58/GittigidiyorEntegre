@@ -15,7 +15,7 @@ class checkForItemId:
         service = client.create_service('{https://product.individual.ws.listingapi.gg.com}IndividualProductServiceBinding' , 'https://dev.gittigidiyor.com:8443/listingapi/ws/IndividualProductService')
         with client.settings(raw_response=True):
             try:
-                response = helpers.serialize_object(service.checkForItemId(apiKey,sign,time,itemId = '',lang},cancelBid,lang).content.decode('utf-8'),dict)
+                response = helpers.serialize_object(service.checkForItemId(apiKey,sign,time,itemId ,lang).content.decode('utf-8'),dict)
                 #Parsing...
 
              

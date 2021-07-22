@@ -6,8 +6,8 @@ import xmltodict
 import json
 
 
-class getDebtCollection:
-    def __init__(self,apiKey = '',sign = '',time = '',lang = '', queryDebtCollectionRequest  = {'balanceCode' : '','pageNumber':'','pageSize':''} ,session = None):
+class getSrsProcessDetailsSaleItem:
+    def __init__(self,apiKey = '',sign = '',time = '',lang = '',getSrsProcessDetailsSaleItem = {'memberId' : '','pageNumber':'','pageSize':'','salesCode' : ['1','2']} ,session = None):
 
         # Zeep Client
 
@@ -15,14 +15,14 @@ class getDebtCollection:
         service = client.create_service('{http://accounting.individual.ws.listingapi.gg.com}IndividualAccountingServiceBinding' , 'http://dev.gittigidiyor.com:8080/listingapi/ws/IndividualAccountingService')
         with client.settings(raw_response=True):
             try:
-                response = helpers.serialize_object(service.getDebtCollection(apiKey,sign,time,lang,queryDebtCollectionRequest).content.decode('utf-8'),dict)
+                response = helpers.serialize_object(service.getSrsProcessSaleItem(apiKey,sign,time,lang,getSrsProcessDetailsSaleItem ).content.decode('utf-8'),dict)
                 #Parsing...
 
              
                 jsondata = xmltodict.parse(response)
                 jsondump = json.dumps(jsondata)
                 jsonload = json.loads(jsondump)
-                jsonList = jsonload['env:Envelope']['env:Body']['ns0:getDebtCollectionResponse']['return']
+                jsonList = jsonload['env:Envelope']['env:Body']['ns0:getSubCategoriesResponse']['return']
                 self.asJson = jsonList
                 
                 

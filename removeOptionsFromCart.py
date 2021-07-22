@@ -7,7 +7,7 @@ import json
 
 
 class removeOptionsFromCart:
-    def __init__(self,apiKey = '',sign = '',time = '',productsOptionFeature = {'productsOptionFeature' : {'productOptions' : {'productOption ' : 'productId' :'','productFeatureType' : {'optionFeatureType' : {'optionId' : '' , 'duration' : ''}}}}}, lang = 'tr',session = None):
+    def __init__(self,apiKey = '',sign = '',time = '',productsOptionFeature = {'productsOptionFeature' : {'productOptions' : {'productOption ' : {'productId' :'','productFeatureType' : {'optionFeatureType' : {'optionId' : '' , 'duration' : ''}}}}}}, lang = 'tr',session = None):
 
         # Zeep Client
 

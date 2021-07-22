@@ -15,7 +15,7 @@ class registerDeveloper:
         service = client.create_service('https://developer.anonymous.ws.listingapi.gg.com}DeveloperServiceBinding' , 'https://dev.gittigidiyor.com:8443/listingapi/ws/DeveloperService')
         with client.settings(raw_response=True):
             try:
-                response = helpers.serialize_object(service.registerDeveloper(nick,password,lang)content.decode('utf-8'),dict)
+                response = helpers.serialize_object(service.registerDeveloper(nick,password,lang).content.decode('utf-8'),dict)
                 #Parsing...
 
              

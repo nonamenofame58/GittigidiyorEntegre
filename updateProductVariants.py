@@ -7,7 +7,7 @@ import json
 
 
 class updateProductVariants:
-    def __init__(self,apiKey = '',sign = '',time = '',productId = '',itemId = '',ProductVariantType = {'productVariant' : {'variantGroups' : 'variant' : {'variantId' : '' , 'operation' : '','variantSpecs' : [],'quantity' : '','stockCode' : '','soldCount' : ''},'photos' : {'photo' : {'photoId' : '','url' : ''}}}},lang = '',session = None):
+    def __init__(self,apiKey = '',sign = '',time = '',productId = '',itemId = '',ProductVariantType = {'productVariant' : {'variantGroups' : {'variant' : {'variantId' : '' , 'operation' : '','variantSpecs' : [],'quantity' : '','stockCode' : '','soldCount' : ''},'photos' : {'photo' : {'photoId' : '','url' : ''}}}}},lang = '',session = None):
 
         # Zeep Client
 

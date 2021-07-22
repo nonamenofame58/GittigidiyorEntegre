@@ -15,7 +15,7 @@ class getStore:
         service = client.create_service('http://store.individual.ws.listingapi.gg.com}IndividualStoreServiceBinding' , 'http://dev.gittigidiyor.com:8080/listingapi/ws/IndividualStoreService')
         with client.settings(raw_response=True):
             try:
-                response = helpers.serialize_object(service.getStore(apiKey,sign,time,lang)content.decode('utf-8'),dict)
+                response = helpers.serialize_object(service.getStore(apiKey,sign,time,lang).content.decode('utf-8'),dict)
                 #Parsing...
 
              

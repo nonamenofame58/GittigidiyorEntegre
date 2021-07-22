@@ -7,7 +7,7 @@ import json
 
 
 class updateProductSales:
-    def __init__(self,apiKey = '',sign = '',time = '',productUpdateSaleTypeArray  = {'productUpdateSales' : [{'item' : {'productId' : '' , 'price' : '','quantity' : '','updateSaleFields' : ['field' : '', 'field' : '']}}]},lang = '',session = None):
+    def __init__(self,apiKey = '',sign = '',time = '',productUpdateSaleTypeArray  = {'productUpdateSales' : [{'item' : {'productId' : '' , 'price' : '','quantity' : '','updateSaleFields' : [{'field' : ''}, {'field' : ''}]}}]},lang = '',session = None):
 
         # Zeep Client
 

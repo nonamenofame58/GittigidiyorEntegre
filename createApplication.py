@@ -7,7 +7,7 @@ import json
 
 
 class createApplication:
-    def __init__(self,applicationInfo = {'applicationInfo' : {'developerId' : '','name' : '','description' : '','accesType' : '','appType' : '', 'descDetail' : '' , 'succesReturnUrl' : '' , 'failReturnUrl' : ''},lang = '',session = None):
+    def __init__(self,applicationInfo = {'applicationInfo' : {'developerId' : '','name' : '','description' : '','accesType' : '','appType' : '', 'descDetail' : '' , 'succesReturnUrl' : '' , 'failReturnUrl' : ''}},lang = '',session = None):
 
         # Zeep Client
 

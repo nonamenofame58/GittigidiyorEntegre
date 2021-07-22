@@ -7,7 +7,7 @@ import json
 
 
 class getCitiesByCodes:
-    def __init__(self,codes = {['item' : '']},lang = '',session = None):
+    def __init__(self,codes = [{'item' : ''}],lang = '',session = None):
 
         # Zeep Client
 

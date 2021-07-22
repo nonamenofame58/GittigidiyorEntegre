@@ -7,7 +7,7 @@ import json
 
 
 class getProductIds:
-    def __init__(self,apiKey = '',sign = '',time = '',startOffSet = 1,rowCount = 1,statusTypes = {'item' : []}, lang = 'tr',session = None):
+    def __init__(self,apiKey = '',sign = '',time = '',startOffSet = 1,rowCount = 1,statusTypes = [{'item' : '' }], lang = 'tr',session = None):
 
         # Zeep Client
 
@@ -15,7 +15,7 @@ class getProductIds:
         service = client.create_service('{https://product.individual.ws.listingapi.gg.com}IndividualProductServiceBinding' , 'https://dev.gittigidiyor.com:8443/listingapi/ws/IndividualProductService')
         with client.settings(raw_response=True):
             try:
-                response = helpers.serialize_object(service.getProductIds(apiKey,sign,time,startOffSet,rowCount ,statusTypes ,lang}).content.decode('utf-8'),dict)
+                response = helpers.serialize_object(service.getProductIds(apiKey,sign,time,startOffSet,rowCount ,statusTypes ,lang).content.decode('utf-8'),dict)
                 #Parsing...
 
              

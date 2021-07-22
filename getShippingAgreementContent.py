@@ -7,7 +7,7 @@ import json
 
 
 class getShippingAgreementContent:
-    def __init__(self,apiKey = '',sign = '',time = '',agreementId,lang = '',session = None):
+    def __init__(self,apiKey = '',sign = '',time = '',agreementId = 213,lang = '',session = None):
 
         # Zeep Client
 

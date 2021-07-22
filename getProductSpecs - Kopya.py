@@ -6,8 +6,8 @@ import xmltodict
 import json
 
 
-class updateStock:
-    def __init__(self,apiKey = '',sign = '',time = '',productId = '',itemId = '',stock = 1,cancelBid = False,lang = '' ,session = None):
+class updatePriceByPercentage:
+    def __init__(self,apiKey = '',sign = '',time = '',productId = '',itemId = '',operatorType = '',percentage = 1,lang = '' ,session = None):
 
         # Zeep Client
 
@@ -15,7 +15,7 @@ class updateStock:
         service = client.create_service('{https://product.individual.ws.listingapi.gg.com}IndividualProductServiceBinding' , 'https://dev.gittigidiyor.com:8443/listingapi/ws/IndividualProductService')
         with client.settings(raw_response=True):
             try:
-                response = helpers.serialize_object(service.updateStock(apiKey,sign,time,productId,itemId,stock,cancelBid,lang).content.decode('utf-8'),dict)
+                response = helpers.serialize_object(service.updatePriceByPercentage(apiKey,sign,time,productId,itemId,operatorType,percentage,lang).content.decode('utf-8'),dict)
                 #Parsing...
 
              
@@ -23,7 +23,7 @@ class updateStock:
                 jsondump = json.dumps(jsondata)
                 jsonload = json.loads(jsondump)
 
-                jsonList = jsonload['env:Envelope']['env:Body']['ns0:updateStockResponse']['return']
+                jsonList = jsonload['env:Envelope']['env:Body']['ns0:updatePriceByPercentageResponse']['return']
                 self.asJson = jsonList
             except:
                 self.asJson = None

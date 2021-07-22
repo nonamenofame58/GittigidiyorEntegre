@@ -7,7 +7,7 @@ import json
 
 
 class getSrsProcessSaleItem:
-    def __init__(self,apiKey = '',sign = '',time = '',lang = SrsProcessSaleItemRequest   = {'balanceCode' : '','pageNumber':'','pageSize':''} ,session = None):
+    def __init__(self,apiKey = '',sign = '',time = '',lang = '',SrsProcessSaleItemRequest   = {'balanceCode' : '','pageNumber':'','pageSize':''} ,session = None):
 
         # Zeep Client
 
