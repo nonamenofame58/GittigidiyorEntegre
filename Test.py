@@ -15,23 +15,54 @@ import socket
 
 
 
-# GETS
+
+# Application Service
+
+from createApplication import createApplication
+from deleteApplication import deleteApplication
+from getApplicationList import getApplicationList
+
+# Category Service
+
 from getCategoriesHavingVariantSpecs import getCategoriesHavingVariantSpecs
 from getParentCategories import getParentCategories
 from getSubCategories import getSubCategories
-from getCities import getCities
 from getCategory import getCategory
 from getCategorySpecs import getCategorySpecs
 from getDeepestCategories import getDeepestCategories
 from getCategoryVariantSpecs import getCategoryVariantSpecs
 from getRequiredCategorySpecs import getRequiredCategorySpecs
 from getCategorySpecsWithDetail import getCategorySpecsWithDetail
+
+# City Service
+
+from getCities import getCities
+from getModifiedCities import getModifiedCities
+from getCity import getCity
+from getCitiesByCodes import getCitiesByCodes
+
+# Developer Service
+from registerDeveloper import registerDeveloper
+from isDeveloper import isDeveloper
+
+# Catalog Service
+
+from searchCatalog import searchCatalog
+
+# Search Service
+
+from search import search
+
+
 # Accounting Service
+
 from getBalances import getBalances
 from getDebtCollection import getDebtCollection
 from getSrsProcessSaleItem import getSrsProcessSaleItem
 from getSrsProcessDetailsSaleItem import getSrsProcessDetailsSaleItem
+
 # Product Service
+
 from cloneProduct import cloneProduct
 from deleteProduct import deleteProduct
 from getNewlyListedProductIdList import getNewlyListedProductIdList
@@ -58,12 +89,69 @@ from updateVariantStockAndActivateProduct import updateVariantStockAndActivatePr
 from getItemIdDetails import getItemIdDetails
 from updateProductSales import updateProductSales
 from applySameDayDeliveryFeature import applySameDayDeliveryFeature
+
 # Product Option Service
+
 from getOptionFeaturesInfo import getOptionFeaturesInfo
 from addOptionsToCart import addOptionsToCart
 from removeOptionsFromCart import removeOptionsFromCart
 from calculateOptionsPrice import calculateOptionsPrice
 from payPrice import payPrice
+
+# Sale Service
+
+from getPagedSales import getPagedSales
+from getSale import getSale
+from getSalesByDateRange import getSalesByDateRange
+from giveRateAndComment import giveRateAndComment
+from replySaleComment import replySaleComment
+from remindForApproval import remindForApproval
+from getReasonsToCancelSales import getReasonsToCancelSales
+from cancelSale import cancelSale
+from getAccountTransactionsV3 import getAccountTransactionsV3
+from getSaleProcessReportV2 import getSaleProcessReportV2
+from removeSaleFromList import removeSaleFromList
+from getItemBuyers import getItemBuyers
+from receiveRemandedItem import receiveRemandedItem
+from giveApprovalForRemandedItem import giveApprovalForRemandedItem
+from cancelSaleAfterEarlyCancellationRequest import cancelSaleAfterEarlyCancellationRequest
+
+# User Messages Service
+
+from getConversations import getConversations
+from getConversationsCount import getConversationsCount
+from getMessages import getMessages
+from getConversationById import getConversationById
+from postConversation import postConversation
+from putMessage import putMessage
+from markAsUnread import markAsUnread
+from markAsRead import markAsRead
+from deleteConversation import deleteConversation
+from deleteConversations import deleteConversations
+
+# Cargo Service
+
+from getCargoInformation import getCargoInformation
+from sendCargoInformation import sendCargoInformation
+from getCargoCompany import getCargoCompany
+from createShippingRequest import createShippingRequest
+from cancelShippingRequest import cancelShippingRequest
+from getShippingRequest import getShippingRequest
+from getUserShippingAgreements import getUserShippingAgreements
+from getShippingAgreementContent import getShippingAgreementContent
+from cancelShipment import cancelShipment
+
+# Activity Service
+from getUnsoldItems import getUnsoldItems
+from getSoldItems import getSoldItems
+from getWatchItems import getWatchItems
+
+# Store Service
+
+from getStore import getStore
+
+
+
 
 ### JSON ###
 # .asJson       ////// Json olarak getirir
