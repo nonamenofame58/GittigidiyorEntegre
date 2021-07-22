@@ -2,6 +2,18 @@
 Gittigidiyor entegrasyon
 
 
+### Kitaplıklar ###
+     # zeep  
+             --- pip install zeep
+     # requests
+     # time
+     # hashlib
+     # json
+     # xmltodict
+     # socket
+     
+
+
 ### JSON ###
      # .asJson       ////// Json olarak getirir
 
