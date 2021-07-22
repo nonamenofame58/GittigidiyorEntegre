@@ -1,0 +1,121 @@
+parameters = {
+
+    "categoryCode" : "gdk",
+    "storeCategoryId":"",
+    "title":"Kodak Z915 12MP",
+    "subtitle":"",
+    "specs": {
+        "spec": [
+            {
+                
+                "name": "Durum",
+                "value": "Sıfır",
+                "type": "Combo",
+                "required": "false"
+                },
+            {
+                
+                "name": "Model",
+                "value": "COOLPIX W300",
+                "type": "Combo",
+                "required": "false"
+                },
+
+            {
+                "name": "Marka",
+                "value": "Nikon",
+                "type": "Combo",
+                "required": "false"
+                },
+
+            {
+                "name": "Renk",
+                "value": "Siyah",
+                "type": "Combo",
+                "required": "false"
+                },
+            {
+                "name": "Garanti",
+                "value": "Yok",
+                "type": "Combo",
+                "required": "false"
+                },
+            {
+                "name": "Garanti Süresi",
+                "value": "Yok",
+                "type": "Combo",
+                "required": "false"
+                },
+            {
+                "name": "Garanti Geçerlilik Yeri",
+                "value": "Türkiye",
+                "type": "Combo",
+                "required": "false"
+                }
+            ]
+        },
+
+
+
+      "photos": {
+        "photo": [
+          {
+            "photoId": "0",
+            "url": "http://images.gittigidiyor.com/2941/KODAK-Z915-10MP-10X-ZOOM-HD-SIFIR-URUN__29416457_0.jpg",
+            "base64": ""
+            
+          },
+
+        ]
+      },
+    "pageTemplate" : "1",
+    "description" : "Kodak Z915 Fotograf Makinesi 10Mp 50X zoom",
+    "startDate" : "",
+    "newCatalogId" : "0",
+    "catalogDetail" : "",
+    "catalogFilter" : "",
+    "format" : "S",
+    "startPrice" : "",
+    "buyNowPrice" : "240",
+    "netEarning" : "",
+    "listingDays" : "30",
+    "productCount" : "1",
+    "cargoDetail" : {
+        "city" : "34",
+        "shippingPayment" : "B",
+        "shippingWhere" : "country",
+        "cargoCompanyDetails" : {
+            "cargoCompanyDetail" : {
+                "name" : "aras",
+                "cityPrice" : "3.00",
+                "countryPrice" : "5.00"
+                }
+            
+            },
+        "shippingTime" : {
+            "days" : "2-3days",
+            "beforeTime" : "10.00"
+            
+
+
+            },
+        },
+    "affiliateOption" : "false",
+    "boldOption" : "false",
+    "catalogOption" : "false",
+    "vitrineOption" : "false",
+    "globalTradeItemNo" : "12345678",
+    "manufacturerPartNo" : "GO12345OOGLE",
+    
+ }   
+
+
+dat = {
+    'catagoryCode' : 'gdk',
+    'withSpecs' : True,
+    'withDeepest' : True,
+    'withCatalog' : True,
+    'lang' : 'tr'
+
+    }
+
