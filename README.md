@@ -3,24 +3,25 @@ Gittigidiyor entegrasyon
 
 
 ### JSON ###
-# .asJson       ////// Json olarak getirir
+     # .asJson       ////// Json olarak getirir
 
 
 
 ### SPECS ###
  # örnek erişim (dict)
- #------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- # [CatName] : {
- #  ['specName'] : { 
- #      ['type']     :{}
- #      ['required'] :{}
- #      ['values']   :{}
- # }
-#------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     # [CatName] : {
+     #  ['specName'] : { 
+     #      ['type']     :{}
+     #      ['required'] :{}
+     #      ['values']   :{}
+      # }
+    #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 #### PARENT CATEGORİES #####
 
- # getParentCategories(Boolean withSpecs ,Boolean withDeepest , Boolean withCatalog ,String lang, session).Categories                //// Kategorileri getirir (array) 
- # getParentCategories(Boolean withSpecs ,Boolean withDeepest , Boolean withCatalog ,String lang, session).CategoryCodes                //// Kategori kodlarını getirir getirir (array)
+     # getParentCategories(Boolean withSpecs ,Boolean withDeepest , Boolean withCatalog ,String lang, session).Categories                //// Kategorileri getirir (array) 
+     # getParentCategories(Boolean withSpecs ,Boolean withDeepest , Boolean withCatalog ,String lang, session).CategoryCodes                //// Kategori kodlarını getirir getirir (array)
 
     #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     #withSpecs: boolean
