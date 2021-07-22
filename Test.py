@@ -179,77 +179,31 @@ from getCategorySpecsWithDetail import getCategorySpecsWithDetail
 
 
 
+### Api key ###
+             
+apiKey = ''
 
-apiKey = 'JRJXp3EnpWPWeC6d2NfYVp8kJfa3eH9d'
-secretKey = 'VjyzKWAbvBxETyQv'
+### Secret Key ###
+secretKey = ''
+
+
 timeStamp = round(time.time() * 1000)
 hashStr = apiKey + secretKey + str(timeStamp)
 sign = hashlib.md5(hashStr.encode()).hexdigest()
 
 session = Session()
-session.auth = HTTPBasicAuth('ugurcannazli2129', '7qDsZv8KmrzfNP8QNjr6JjfceJXhQyQf')
+
+
+### Auth Role Name ve Password
+session.auth = HTTPBasicAuth('', '')
 
 
 
 
-host = '127.0.0.1'
-port = 65432
 
 
-
-import pickle
-def getParentCategoriesM(data,conn):    
-    try:
-        print (data)
-        jsonData = getParentCategories(False,False,False,'tr',session).asJson
-        jsonData = json.dumps(jsonData, indent=2).encode('utf-8')
-        conn.sendall(b'getParentCategories')
-        time.sleep(0.1)
-        conn.sendall(bytes(jsonData))
-    except:
-        pass
-    
     
 
-    
-def getSubCategoriesM(data,conn):
-
-    
-    data = data.encode('utf-8')
-
-    jsonData = getSubCategories(data,False,False,False,'tr',session).asJson
-    if jsonData == None:
-        conn.sendall(b'Marka')
-        
-        jsonData = getCategorySpecs(data,session).asJson[0]
-        jsonData = json.dumps(jsonData,indent = 2).encode('utf-8')
-        conn.sendall(jsonData)
-    else:
-            
-        jsonData = json.dumps(jsonData,indent = 2).encode('utf-8')
-        conn.sendall(b'getSubCategories')
-        time.sleep(0.1)
-        conn.sendall(jsonData)
-
-
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    print ('Listening')
-    s.bind((host, port))
-    s.listen()
-    conn, addr = s.accept()
-    with conn:
-        print('Connected by', addr)
-        conn.sendall(b'Connected')
-        while True:
-            data = conn.recv(2048)
-            data = data.decode('utf-8')
-            if data[:3] == '001':
-                getParentCategoriesM(data[3:],conn)
-            if data[:3] == '002':
-                getSubCategoriesM(data[3:],conn)
-            if not data:
-                break
-            
 
 
 
